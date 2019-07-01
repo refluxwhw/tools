@@ -22,10 +22,10 @@ Widget::Widget(QWidget *parent) :
         if (0 != m_timerID) { // 暂停
             killTimer(m_timerID);
             m_timerID = 0;
-            ui->pushButton->setText("继续");
+            ui->pushButton->setText(QString::fromLocal8Bit("继续"));
         } else { // 继续
             m_timerID = startTimer(100);
-            ui->pushButton->setText("暂停");
+            ui->pushButton->setText(QString::fromLocal8Bit("暂停"));
         }
     });
 
