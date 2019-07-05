@@ -79,7 +79,7 @@ void Widget::timerEvent(QTimerEvent *)
     QDateTime now = QDateTime::currentDateTime();
     QString str = now.toString(TIME_FORMAT_MS);
     qint64  val = now.toMSecsSinceEpoch();
-    QString txt = QString("%1   %2 ms").arg(str).arg(val);
+    QString txt = QString("%1\n%2 ms").arg(str).arg(val);
     ui->label_cur->setText(txt);
 }
 
